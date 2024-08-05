@@ -228,7 +228,7 @@ body {
     transition: .3s
 }
 
-#toggle [data-type="monster"].selected+.hb {
+#toggle [data-type="drink"].selected+.hb {
     left: 70px;
     width: 5em;
     background-color: #E80773
@@ -243,7 +243,7 @@ body {
 
 .comment {
     position: absolute;
-    bottom: 60px;
+    bottom: 20%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -259,7 +259,7 @@ body {
     animation: comment 3s both
 }
 
-#ribbon {
+/* #ribbon {
     -webkit-background-size: contain;
     background-size: contain;
     width: 93px;
@@ -268,7 +268,7 @@ body {
     top: 8px;
     right: 15px;
     z-index: 9
-}
+} */
 
 .adsbygoogle {
     position: absolute;
@@ -478,4 +478,79 @@ body {
     position: absolute;
     top: 15px;
     right: -8px;
+}
+
+#main1 {
+    margin-top: 50px;
+    border-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+#qrcode img {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+#qrcode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 999;
+    display: none;
+}
+
+.footer {
+    position: fixed;
+    left: 10px;
+    bottom: 5px;
+    right: 10px;
+    width: 95%;
+    color: black;
+    text-align: center;
+}
+
+.m-toast-pop {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 500px;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    text-align: center;
+}
+
+.m-toast-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.m-toast-inner-text {
+    display: inline-block;
+    margin: 0 22px;
+    padding: 19px 21px;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 22px;
+    background: rgba(0, 0, 0, 0.72);
+    border-radius: 10px;
 }

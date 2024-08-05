@@ -3,32 +3,47 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>今天吃什么?(西医版)</title>
+    <title>今天吃什么?</title>
     <meta name="keywords" content="中午吃什么" />
     <meta name="description" content="中午吃什么" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="stylesheet" href="./css/layui.css" media="all">
     <link rel="icon" href="./images/icon.png">
+
+    <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?0b3118e487de48026f477760c7773364";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
 </head>
 
 <body>
     <div class="bg"></div>
     <div id="temp_container"></div>
     <div id="wrapper">
-        <h1 class="title">今天<span class="time">午饭</span>吃</br>
+        <h1 class="title">今天<span class="time">中午</span><span id="eat-drink">吃</span></br>
             <span class="what">啥呢</span><span class="punctuation">？</span>
         </h1>
         <span id="start"><span>开始</span></span>
         <p class="os"></p>
         <span class="tip">点击可以切换饭点~</span> <br>
     </div>
-    
-<div id="toggle">
-    <span data-type="human" class="selected">吃吃吃吃</span>
-    <span data-type="monster">喝喝喝喝</span>
-    <div class="hb"></div>
-</div>
+    <div id="toggle">
+        <span data-type="eat" class="selected">吃吃吃吃
+        </span>
+        <span data-type="drink">喝喝喝喝
+        </span>
+        <div class="hb"></div>
+    </div>
 
     <script src="js/zepto.min.js"></script>
     <script src="js/app.min.js"></script>
@@ -49,7 +64,7 @@
 
     <!-- 页脚 -->
     <div class="footer">
-        ©2022 By
+        ©2024 By
         <button id="main1">lislond ❤️</button>
         <a href="https://www.lislond.top/">个人博客</a>
 
@@ -74,7 +89,7 @@
         <!--按钮弹出图片结束-->
     </div>
 
-    <div id="m-toast-pop" class="m-toast-pop">
+    <!-- <div id="m-toast-pop" class="m-toast-pop">
         <div class="m-toast-inner">
             <div class="m-toast-inner-text" id="m-toast-inner-text">复制成功</div>
         </div>
@@ -89,98 +104,8 @@
                 $('#m-toast-pop').fadeOut();
             }, 2000);
         }
-    </script>
+    </script> -->
 
 </body>
 
 </html>
-<style>
-    #main1 {
-        margin-top: 50px;
-        border-color: transparent;
-        border-style: none;
-        cursor: pointer;
-        background-color: #f0f0f0;
-        color: black;
-    }
-
-    #qrcode img {
-        position: absolute;
-        margin: auto;
-        left: 0;
-        top: 50%;
-        right: 0;
-        bottom: 0;
-        width: 200px;
-        height: 200px;
-        display: block;
-    }
-
-    #qrcode {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.6);
-        z-index: 999;
-        display: none;
-    }
-
-    .footer {
-        position: fixed;
-        left: 10px;
-        bottom: 5px;
-        right: 10px;
-        width: 95%;
-        color: black;
-        text-align: center;
-    }
-</style>
-
-<style type="text/css">
-    .m-toast-pop {
-        display: none;
-        position: fixed;
-        width: 100%;
-        top: 500px;
-        bottom: 0;
-        right: 0;
-        overflow: auto;
-        text-align: center;
-    }
-
-    .m-toast-inner {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
-    .m-toast-inner-text {
-        display: inline-block;
-        margin: 0 22px;
-        padding: 19px 21px;
-        font-size: 16px;
-        color: #FFFFFF;
-        letter-spacing: 0;
-        line-height: 22px;
-        background: rgba(0, 0, 0, 0.72);
-        border-radius: 10px;
-    }
-</style>
-<script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-    crossorigin="anonymous"></script>
-<script>
-    // 百度统计
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?0b3118e487de48026f477760c7773364";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>

@@ -37,6 +37,48 @@
         <p class="os"></p>
         <span class="tip">点击可以切换饭点~</span> <br>
     </div>
+
+    <!-- Trigger/Open The Modal -->
+<button id="myBtn" class="btn" style="position: fixed; left: 50%; bottom: 30%; transform: translateX(-50%);">点我领红包干饭</button>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>快去干饭</p>
+    <button onclick="window.location.href='https://dpurl.cn/hEgdgiwz';">去美团</button>
+    <button onclick="window.location.href='https://22w2s048ZY1.ug.ele.me/wow/alsc/mod/9b7dd5e527780fb84b5559a7?actId=1&inviterId=2cf4e57a&_ltracker_f=hjb_app_xbb&chInfo=ch_app_chsub_Photo';">去饿了么</button>
+    <button onclick="window.location.href='https://imgcdn.lislond.top/images/share/elm_wx.jpg';">去饿了么小程序</button>
+  </div>
+  <script>
+  // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
     <div id="toggle">
         <span data-type="eat" class="selected">吃吃吃吃
         </span>
@@ -89,23 +131,11 @@
         <!--按钮弹出图片结束-->
     </div>
 
-    <!-- <div id="m-toast-pop" class="m-toast-pop">
+    <div id="m-toast-pop" class="m-toast-pop">
         <div class="m-toast-inner">
-            <div class="m-toast-inner-text" id="m-toast-inner-text">复制成功</div>
+            <div class="m-toast-inner-text" id="m-toast-inner-text"></div>
         </div>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
-    <script type="text/javascript">
-        onload = function () {
-            // on('click', function() {      
-            $('#m-toast-inner-text').text('点击文字可以切换饭点');
-            $('#m-toast-pop').fadeIn();
-            setTimeout(function () {
-                $('#m-toast-pop').fadeOut();
-            }, 2000);
-        }
-    </script> -->
-
 </body>
 
 </html>

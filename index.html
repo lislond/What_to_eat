@@ -22,8 +22,33 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
+    <style>
+        /* 调整弹出图片的样式 */
+        #qrcode img,
+        #qrcode2 img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            width: 250px; /* 调整图片宽度 */
+            height: 250px; /* 调整图片高度 */
+            display: block;
+        }
 
-
+        #qrcode,
+        #qrcode2 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: 999;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -39,45 +64,52 @@
     </div>
 
     <!-- Trigger/Open The Modal -->
-<button id="myBtn" class="btn" style="position: fixed; left: 50%; bottom: 30%; transform: translateX(-50%);">点我领红包干饭</button>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>快去干饭</p>
-    <button onclick="window.location.href='https://dpurl.cn/hEgdgiwz';">去美团</button>
-    <button onclick="window.location.href='https://22w2s048ZY1.ug.ele.me/wow/alsc/mod/9b7dd5e527780fb84b5559a7?actId=1&inviterId=2cf4e57a&_ltracker_f=hjb_app_xbb&chInfo=ch_app_chsub_Photo';">去饿了么</button>
-    <button onclick="window.location.href='https://imgcdn.lislond.top/images/share/elm_wx.jpg';">去饿了么小程序</button>
-  </div>
-  <script>
-  // Get the modal
-var modal = document.getElementById("myModal");
+    <button id="myBtn" class="btn" style="position: fixed; left: 50%; bottom: 30%; transform: translateX(-50%);">点我领红包干饭</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>快去干饭</p>
+            <button onclick="window.location.href='http://dpurl.cn/9GV2bn8z';">去美团</button>
+            <button onclick="window.location.href='https://S9Q3t67GJI4.ug.ele.me/wow/alsc/mod/dd84fb45b245f3292e170527?actId=1&inviterId=2cf4e57a&_ltracker_f=lgrzx&chInfo=ch_app_chsub_Photo&alsc_exsrc=ch_app_chsub_Photo';">去饿了么</button>
+            <button id="ele">去饿了么小程序</button>
+            <div id="qrcode">
+                <img id="image1" src="./images/elm_wx.jpg">
+            </div>
+        </div>
+        <script>
+            $(function () {
+                // 点击去饿了么小程序按钮显示图片
+                $("#ele").click(function () {
+                    $("#qrcode").fadeIn("slow");
+                });
+                // 点击图片区域隐藏图片
+                $("#qrcode").click(function () {
+                    $("#qrcode").fadeOut("slow");
+                });
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+                // 模态框相关逻辑
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                };
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-</div>
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                };
+            });
+        </script>
+    </div>
 
     <div id="toggle">
         <span data-type="eat" class="selected">吃吃吃吃
@@ -110,29 +142,26 @@ window.onclick = function(event) {
         <button id="main1">lislond ❤️</button>
         <a href="https://www.lislond.top/">个人博客</a>
 
-        <!--按钮弹出图片-->
-        <div id="qrcode">
-            <img id="image1" width="100%" height="100%" src="./images/qrcode_wx.png">
+        <div id="qrcode2">
+            <img id="image" src="./images/qrcode_wx.png">
         </div>
-
 
         <script>
             $(function () {
+                // 点击页脚按钮显示图片
                 $("#main1").click(function () {
-                    $("#qrcode").fadeIn("slow");
+                    $("#qrcode2").fadeIn("slow");
                 });
-
-                $("#qrcode").click(function () {
-                    $("#qrcode").fadeOut("slow");
-                })
-
+                // 点击图片区域隐藏图片
+                $("#qrcode2").click(function () {
+                    $("#qrcode2").fadeOut("slow");
+                });
             });
         </script>
-        <!--按钮弹出图片结束-->
     </div>
 
     <div id="m-toast-pop" class="m-toast-pop">
-            <div class="m-toast-inner-text" id="m-toast-inner-text"></div>
+        <div class="m-toast-inner-text" id="m-toast-inner-text"></div>
     </div>
 </body>
 
